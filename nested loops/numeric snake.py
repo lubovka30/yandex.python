@@ -16,7 +16,7 @@ if p == 0:
     exit()
 
 
-def getRank(num):
+def getrank(num):
     rank: int = 0
     while num:
         num = num // 10
@@ -24,10 +24,10 @@ def getRank(num):
     return rank
 
 
-def chekSpace(a, b):
+def chekspace(a, b):
     s: int = 0
-    if getRank(out[a][b]) != getRank(p):
-        s = getRank(p) - getRank(out[a][b])
+    if getrank(out[a][b]) != getrank(p):
+        s = getrank(p) - getrank(out[a][b])
     space: str = " " * s + " "
     return space
 
@@ -47,11 +47,11 @@ for i in range(n):
     if float(i % 2) != 0:
         j: int = m - 1
         while j >= 0:
-            snake += chekSpace(i, j) + str(out[i][j])
+            snake += chekspace(i, j) + str(out[i][j])
             j -= 1
     else:
         j: int = 0
         while j < m:
-            snake += chekSpace(i, j) + str(out[i][j])
+            snake += chekspace(i, j) + str(out[i][j])
             j += 1
     print(snake[1:])

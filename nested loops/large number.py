@@ -13,7 +13,7 @@ n = int(input())
 k1 = int(input())
 
 
-def findMax(num):
+def findmax(num):
     m: int = 0
     while num:
         cur = num % 10
@@ -23,7 +23,7 @@ def findMax(num):
     return str(m)
 
 
-out = findMax(k1)
+out = findmax(k1)
 while (n - 1) > 0:
     k2 = int(input())
     out += findMax(k2)
