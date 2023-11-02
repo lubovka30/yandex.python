@@ -9,14 +9,17 @@
 # Если в результате анализа получено несколько ответов,
 # следует вывести первый по алфавиту.
 result: str = ""
-while (text := input()) != "ФИНИШ":
-    count: int = 0
-    for i in range(len(text)):
-        tmp = text[i]
-        if text.count(tmp) > count:
-            count = text.count(tmp)
+text: str = ""
+while (text1 := input()) != "ФИНИШ":
+    text += text1.lower()
+text = text.replace(" ", "")
+count: int = 0
+for i in range(len(text)):
+    tmp = text[i]
+    if text.count(tmp) > count:
+        count = text.count(tmp)
+        result = tmp
+    elif text.count(tmp) == count:
+        if tmp < result:
             result = tmp
-        elif text.count(tmp) == count:
-            if tmp < result:
-                result = tmp
-print(result.lower())
+print(result)
