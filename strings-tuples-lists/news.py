@@ -13,8 +13,7 @@
 # Многоточие учитывается при подсчёте длины заголовка.
 
 length = int(input())
-n = int(input())
-for i in range(n):
+for i in range(int(input())):
     text = input()
     if len(text) <= length:
         print(text)

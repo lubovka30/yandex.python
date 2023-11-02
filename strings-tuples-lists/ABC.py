@@ -8,12 +8,10 @@
 # YES — если все слова начинаются с нужной буквы.
 # NO — если хотя бы одно слово начинается не с нужной буквы.
 flag: bool = True
-count = int(input())
-while count:
+for i in range(int(input())):
     word = input()
     if not (word.startswith("а") or word.startswith("б") or word.startswith("в")):
         flag = False
-    count -= 1
 if flag:
     print("YES")
 else:

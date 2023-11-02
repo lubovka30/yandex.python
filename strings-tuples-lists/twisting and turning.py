@@ -6,7 +6,6 @@
 # Формат вывода
 # Вертикальное представление введённой строки.
 j: int = 0
-text = input()
-for i in text:
+for i in (text := input()):
     print(text[j])
     j += 1
